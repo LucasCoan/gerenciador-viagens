@@ -8,6 +8,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.equalToIgnoringCase;
 
+
 public class ViagensTestComBody {
     @Test
     public void testCadastroDeViagensValidaRetornoSucesso() {
@@ -47,6 +48,7 @@ public class ViagensTestComBody {
                 .statusCode(201)
                 .body("data.localDeDestino", equalTo("Braco do Norte"))
                 .body("data.acompanhante", equalToIgnoringCase("Lucas Coan Mazzuco"));
+
 
         System.out.println(token);
       }
